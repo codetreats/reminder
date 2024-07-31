@@ -1,8 +1,5 @@
 #!/bin/bash
 set -e
-if [ -f /prepared.flag ] ; then
-  exit
-fi
 
 cd /jobs/
 for JOB in $(find . -name "*.txt" | cut -d "/" -f2 | cut -d "." -f1); do
@@ -13,5 +10,3 @@ for JOB in $(find . -name "*.txt" | cut -d "/" -f2 | cut -d "." -f1); do
 done
 
 crontab /etc/cron.d/cronjob
-
-touch /prepared.flag

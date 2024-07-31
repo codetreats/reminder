@@ -21,4 +21,4 @@ export MAIL_TO="$MAIL_TO"
 export SUBJECT="$SUBJECT"
 export TEXT="$TEXT"
 
-php /pipeline/src/mail.php "$SUBJECT" "$TEXT"
+php /mail.php "$SUBJECT" "$TEXT"
