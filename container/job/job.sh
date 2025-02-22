@@ -8,7 +8,5 @@ PARAMS=$2
 
 # Enter your pipeline steps below
 # Syntax: $RUNSTEP $STATUS <DESCRIPTION> <COMMAND>
-if [[ -f /jobs/$PARAMS.txt ]] ; then
-    $RUNSTEP $STATUS "Send Reminder $PARAMS" "/job/remind.sh /jobs/$PARAMS.txt"
-fi
+$RUNSTEP $STATUS "Send Reminder $PARAMS" "/job/remind.sh /jobs/$PARAMS.txt"
 

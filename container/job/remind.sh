@@ -2,6 +2,12 @@
 set -e
 
 JOB=$1
+
+if [[ ! -f $JOB ]] ; then
+  echo "Job file not found: '$JOB'"
+  exit 1
+fi
+
 source $JOB
 
 echo "MAIL_HOST=$MAIL_HOST"

@@ -26,7 +26,7 @@ services:
     ports:
       - ${PORT_CODETREATS_REMINDER_HTTP}:80
     volumes:
-      - /media/nas/docker/data/reminder/jobs:/jobs
+      - /media/nas/docker/data/reminder/jobs:/jobs:ro
     restart: always
 networks:
   default_network:
